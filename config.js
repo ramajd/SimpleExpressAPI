@@ -5,7 +5,8 @@ var fs     = require('fs');
 var default_config = {
     APP_NAME : 'SimpleExpressAPI',
     WEB : {
-        PORT : 8080
+        PORT : 8080,
+        PREFIX : '/api'
     }
 };
 

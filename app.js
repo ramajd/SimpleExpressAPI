@@ -40,20 +40,28 @@ auth.initialize(function (err) {
 
 app.use(function (req, res, next) {
 
-    res.serverError = function (err) {
-        return res.status(500).send(err);
+    res.serverError = function (msg) {
+        var err = new Error(msg);
+        err.status = 500;
+        next(err);
     };
 
-    res.badRequest = function (err) {
-        return res.status(400).send(err);
+    res.badRequest = function (msg) {
+        var err = new Error(msg);
+        err.status = 400;
+        next(err);
     };
 
-    res.forbidden = function (err) {
-        return res.status(403).send(err);
+    res.forbidden = function (msg) {
+        var err = new Error(msg);
+        err.status = 403;
+        next(err);
     };
 
-    res.notFound = function (err) {
-        return res.status(404).send(err);
+    res.notFound = function (msg) {
+        var err = new Error(msg);
+        err.status = 404;
+        next(err);
     };
 
     res.success = function (data) {
@@ -82,7 +90,7 @@ app.use(function (req, res, next) {
 });
 
 // error handler
-app.use(function (err, req, res/*, next*/) {
+app.use(function (err, req, res, next) {
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};

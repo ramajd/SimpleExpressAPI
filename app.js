@@ -5,7 +5,6 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var passport = require('passport');
 
 var config = require('./config');
 var auth   = require('./auth');
@@ -31,13 +30,7 @@ models.initialize(function (err) {
         throw err;
     }
 });
-auth.initialize(function (err) {
-    if (err) {
-        throw err;
-    }
-    app.use(passport.initialize());
-});
-
+app.use(auth.initialize());
 app.use(function (req, res, next) {
 
     res.serverError = function (msg) {

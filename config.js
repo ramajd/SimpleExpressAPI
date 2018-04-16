@@ -6,7 +6,8 @@ var default_config = {
     APP_NAME : 'SimpleExpressAPI',
     WEB : {
         PORT : 8080,
-        PREFIX : '/api'
+        PREFIX : '/api',
+        JWT : { SECRET : 'sample jwt secret, you should CHANGE IT in production.' }
     }
 };
 

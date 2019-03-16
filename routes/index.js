@@ -8,7 +8,10 @@ var AuthHelper = require('../helpers/auth');
 router.get('/', function (req, res, next) {
     res.render('index', {
         title: config.APP_NAME,
-        uptime: (process.uptime() + "").toHHMMSS()
+        uptime: (process.uptime() + "").toHHMMSS(),
+        menu: [
+            { title: 'API Documentation', path: config.WEB.PREFIX + 'docs'}
+        ]
     });
 });
 /**

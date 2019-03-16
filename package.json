@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "doc": "apidoc -i routes -o public/docs"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -18,5 +19,11 @@
     "passport-jwt": "^4.0.0",
     "require.all": "^2.0.4",
     "serve-favicon": "~2.4.5"
+  },
+  "apidoc": {
+    "name": "SimpleExpressAPI",
+    "description": "SimpleExpressAPI API Documentation",
+    "title": "SimpleExpressAPI Documentation",
+    "version": "1.0.0"
   }
 }

@@ -8,6 +8,8 @@ var default_config = {
         PORT : 8080,
         PREFIX : '/',
         JWT : { SECRET : 'sample jwt secret, you should CHANGE IT in production.' }
+    },
+    DB : {
     }
 };
 

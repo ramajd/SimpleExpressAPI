@@ -69,7 +69,6 @@ app.use(function (req, res, next) {
         "Origin, X-Requested-With, Content-Type, Accept, Authorization");
 
     next();
-
 });
 
 String.prototype.toHHMMSS = function () {

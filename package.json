@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "lint": "./node_modules/.bin/eslint .",
     "doc": "apidoc -i routes -o public/docs"
   },
   "dependencies": {
@@ -20,10 +21,29 @@
     "require.all": "^2.0.4",
     "serve-favicon": "~2.4.5"
   },
+  "devDependencies": {
+    "eslint": "^5.15.2"
+  },
   "apidoc": {
     "name": "SimpleExpressAPI",
     "description": "SimpleExpressAPI API Documentation",
     "title": "SimpleExpressAPI Documentation",
     "version": "1.0.0"
+  },
+  "eslint": {
+    "env": {
+      "commonjs": true,
+      "es6": true,
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018
+    },
+    "rules": {}
   }
 }

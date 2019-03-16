@@ -5,7 +5,7 @@ var debug = require('debug')(config.APP_NAME + ':routes');
 var AuthHelper = require('../helpers/auth');
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
+router.get('/', function (req, res, next) {     // eslint-disable-line no-unused-vars 
     res.render('index', {
         title: config.APP_NAME,
         uptime: (process.uptime() + "").toHHMMSS(),
@@ -27,7 +27,7 @@ for (let k in routes) {
     routes[k].forEach(route => {
         router[route.method.toLowerCase()](
             route.path,
-            (req, res, next) => {
+            (req, res, next) => {                       // eslint-disable-line no-unused-vars 
                 AuthHelper.AuthenticateRoute(route)
                     .then( user => { 
                         req.user = user;

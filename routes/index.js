@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
 var config = require('../config');
-var debug = require('debug')(config.APP_NAME + ':routes');
+var debug = require('debug')(config.TITLE + ':routes');
 var AuthHelper = require('../helpers/auth');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {     // eslint-disable-line no-unused-vars 
     res.render('index', {
-        title: config.APP_NAME,
+        title: config.TITLE,
         uptime: (process.uptime() + "").toHHMMSS(),
         menu: [
             { title: 'API Documentation', path: config.WEB.PREFIX + 'docs'}

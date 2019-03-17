@@ -3,7 +3,7 @@ var extend = require('extend');
 var fs     = require('fs');
 
 var default_config = {
-    APP_NAME : 'SimpleExpressAPI',
+    TITLE : 'SimpleExpressAPI',
     WEB : {
         PORT : 8080,
         PREFIX : '/',

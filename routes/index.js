@@ -5,7 +5,7 @@ var debug = require('debug')(config.TITLE + ':routes');
 var AuthHelper = require('../helpers/auth');
 
 /* GET home page. */
-router.get('/', function (req, res, next) {     // eslint-disable-line no-unused-vars 
+router.get('/', function (req, res) {
     res.render('index', {
         title: config.TITLE,
         uptime: (process.uptime() + "").toHHMMSS(),

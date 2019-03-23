@@ -18,7 +18,7 @@
     "morgan": "~1.9.0",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "require.all": "^2.0.4",
+    "require-all": "^3.0.0",
     "serve-favicon": "~2.4.5"
   },
   "devDependencies": {
@@ -31,4 +31,3 @@
     "version": "1.0.0"
   }
 }
-

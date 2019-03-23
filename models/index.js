@@ -1,7 +1,7 @@
 
-let models = require('require.all')({
-    dir: '.',
-    match: /-model\.js$/i,
+let models = require('require-all')({
+    dirname: __dirname,
+    filter: /.+-model\.js$/i,
     recursive: false
 });
 

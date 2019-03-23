@@ -17,9 +17,9 @@ router.get('/', function (req, res) {
 /**
  * all files with `-routes.js` suffix will be loaded automatically.
  */
-const routes = require('require.all')({
-    dir: '.',
-    match: /routes\.js$/i,
+const routes = require('require-all')({
+    dirname: __dirname,
+    filter: /.+-routes\.js$/i,
     recursive: false
 });
 
